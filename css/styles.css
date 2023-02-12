@@ -11617,5 +11617,17 @@ body {
   }
   
   .contact-info-container p{
-    font-size: 15px;
+    font-size: 17px;
+  }
+
+  .navbar-brand img {
+    height: 4rem;
+  }
+
+  nav{
+    padding: 0px;
+  }
+
+  .partners{
+    padding-bottom: 0px;
   }

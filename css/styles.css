@@ -11868,3 +11868,7 @@ body {
   margin: 0 0 15px 0 0 0;
   padding: 0;
 }
+
+.gallery-item img{
+  height: 100%;
+}

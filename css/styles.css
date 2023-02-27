@@ -11702,173 +11702,119 @@ body {
 /*--------------------------------------------------------------
 # Gallery Single Section
 --------------------------------------------------------------*/
-.gallery-single .portfolio-details-slider img {
-  width: 100%;
-}
 
-.gallery-single .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
-}
-
-.gallery-single .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--color-primary);
-}
-
-.gallery-single .swiper-button-prev,
-.gallery-single .swiper-button-next {
-  width: 48px;
-  height: 48px;
-}
-
-.gallery-single .swiper-button-prev:after,
-.gallery-single .swiper-button-next:after {
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-.gallery-single .swiper-button-prev:hover:after,
-.gallery-single .swiper-button-next:hover:after {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-@media (max-width: 575px) {
-
-  .gallery-single .swiper-button-prev,
-  .gallery-single .swiper-button-next {
-    display: none;
-  }
-}
-
-.gallery-single .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  font-family: var(--font-secondary);
-}
-
-.gallery-single .portfolio-info h3:after {
-  content: "";
+.slick-slider .slick-prev, .slick-slider .slick-next {
+  z-index: 100;
+  font-size: 2.5em;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  color: #B7B7B7;
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--color-primary);
+  top: 50%;
+  text-align: center;
+  color: #000;
+  opacity: .3;
+  transition: opacity .25s;
+  cursor: pointer;
+}
+.slick-slider .slick-prev:hover, .slick-slider .slick-next:hover {
+  opacity: .65;
+}
+.slick-slider .slick-prev {
   left: 0;
-  bottom: 0;
+}
+.slick-slider .slick-next {
+  right: 0;
 }
 
-.gallery-single .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
+#detail .product-images {
+  width: 100%;
+  margin: 0 auto;
+  border:1px solid #eee;
+}
+#detail .product-images li, #detail .product-images figure, #detail .product-images a, #detail .product-images img {
+  display: block;
+  outline: none;
+  border: none;
+}
+#detail .product-images .main-img-slider figure {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+#detail .product-images .main-img-slider figure a {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+#detail .product-images .main-img-slider figure a img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#detail .product-images .thumb-nav {
+  margin: 0 auto;
+  padding:20px 10px;
+  max-width: 600px;
+}
+#detail .product-images .thumb-nav.slick-slider .slick-prev, #detail .product-images .thumb-nav.slick-slider .slick-next {
+  font-size: 1.2em;
+  height: 20px;
+  width: 26px;
+  margin-top: -10px;
+}
+#detail .product-images .thumb-nav.slick-slider .slick-prev {
+  margin-left: -30px;
+}
+#detail .product-images .thumb-nav.slick-slider .slick-next {
+  margin-right: -30px;
+}
+#detail .product-images .thumb-nav li {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#detail .product-images .thumb-nav li img {
+  display: block;
+  width: 100%;
+  max-width: 75px;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  -webkit-transition: border-color .25s;
+  -ms-transition: border-color .25s;
+  -moz-transition: border-color .25s;
+  transition: border-color .25s;
+}
+#detail .product-images .thumb-nav li:hover, #detail .product-images .thumb-nav li:focus {
+  border-color: #999;
+}
+#detail .product-images .thumb-nav li.slick-current img {
+  border-color: #d12f81;
 }
 
-.gallery-single .portfolio-info ul li {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
+.sr-only{
+  display: none !important;
 }
 
-.gallery-single .portfolio-info ul strong {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #6b7075;
-  font-size: 14px;
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 30px;
+  line-height: 1;
+  opacity: .75;
+  color: #F46944;
 }
 
-.gallery-single .portfolio-info .btn-visit {
-  padding: 8px 40px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.gallery-single .portfolio-info .btn-visit:hover {
-  background: #2cbc85;
-}
-
-.gallery-single .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #fff;
-  font-family: var(--font-secondary);
-}
-
-.gallery-single .portfolio-description p {
-  padding: 0;
-}
-
-.gallery-single .portfolio-description .testimonial-item {
-  padding: 30px 30px 0 30px;
-  position: relative;
-  background: var(--color-secondary);
-  height: 100%;
-  margin-bottom: 50px;
-}
-
-.gallery-single .portfolio-description .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50px;
-  border: 6px solid #2e3133;
+#detail .main-img-slider img {
   float: left;
-  margin: 0 10px 0 0;
+  width:  1250px;
+  height: 650px;
+  object-fit: contain;
 }
 
-.gallery-single .portfolio-description .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 15px 0 5px 0;
-  padding-top: 20px;
-}
-
-.gallery-single .portfolio-description .testimonial-item h4 {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0;
-}
-
-.gallery-single .portfolio-description .testimonial-item .quote-icon-left,
-.gallery-single .portfolio-description .testimonial-item .quote-icon-right {
-  color: #5bd9a9;
-  font-size: 26px;
-  line-height: 0;
-}
-
-.gallery-single .portfolio-description .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.gallery-single .portfolio-description .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.gallery-single .portfolio-description .testimonial-item p {
-  font-style: italic;
-  margin: 0 0 15px 0 0 0;
-  padding: 0;
-}
-
-.gallery-item img{
-  height: 100%;
+.thumb-nav li img {
+  float: left;
+  width:  75px;
+  height: 58px;
+  object-fit: cover;
 }
